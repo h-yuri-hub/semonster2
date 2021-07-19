@@ -3,16 +3,16 @@ package semonster2;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public clss SeMonsterGame{
+public class SeMonsterGame{
     HashMap<String, Player> playerMap = new HashMap<>();
-    LibkedList<Integer> randomNumberList = new LinkedList<Integer>();
+    LinkedList<Integer> randomNumberList = new LinkedList<Integer>();
 
     /**
     * 0~4までの値がランダムに一定数格納されたLinkedLIst
     *
     * @param randomNumberList
     */
-    seMonsterGame(LinkedList<Integer> randomNumberList){
+    SeMonsterGame(LinkedList<Integer> randomNumberList){
         this.randomNumberList =randomNumberList;
     }
     /**
@@ -27,6 +27,6 @@ public clss SeMonsterGame{
     void draw(String playerName){
         Player player = this.playerMap.get(playerName);
         player.drawMonsters();
-        System.out,println(player);
+        System.out.println(player);
     }
 }
