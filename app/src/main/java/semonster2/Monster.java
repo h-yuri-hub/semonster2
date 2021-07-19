@@ -6,7 +6,7 @@ public class Monster {
     private String name;
     private int rare;
 
-    public void toString() {
+    public void to_String() {
         System.out.println(name+":レア度["+rare+"]");
     }
 
@@ -14,14 +14,18 @@ public class Monster {
         String[] monsterList={"ドラゴン","デュラハン","スライム","スケルトン","ドードリオ"};
         
         return monsterList[x];
-    
+    }
 
+    public void evolution(int x){
+        if(this.rare>3){
+            this.name = "Furutetsu";
+        }
     }
         
     Monster(int n,int r){
-        this.name=n;
+        this.name=this.summonMonster(n);
         this.rare=r;
-        this.toString();
+        this.to_String();
     }
 
 }
