@@ -20,8 +20,8 @@ public class SeMonsterGame{
      *
      * @param playerName
      */
-    void addPlayer(String plyaername){
-        this.playerMap.put(plyaername, new Player(randomNumberList, playerName));
+    void addPlayer(String playerName){
+        this.playerMap.put(playerName, new Player(randomNumberList, playerName));
     }
 
     void draw(String playerName){
