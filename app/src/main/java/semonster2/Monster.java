@@ -3,29 +3,35 @@ package semonster2;
 import java.util.List;
 
 public class Monster {
-    private String name;
-    private int rare;
+  private String name;
+  private int rare;
 
-    public void to_String() {
-        System.out.println(name+":レア度["+rare+"]");
-    }
+  public void to_String() {
+    System.out.println(name + ":レア度[" + rare + "]");
+  }
 
-    public String summonMonster(int x) {
-        String[] monsterList={"ドラゴン","デュラハン","スライム","スケルトン","ドードリオ"};
-        
-        return monsterList[x];
-    }
+  public String summonMonster(int x) {
+    String[] monsterList = { "ドラゴン", "デュラハン", "スライム", "スケルトン", "ドードリオ" };
 
-    public void evolution(int x){
-        if(this.rare>3){
-            this.name = "Furutetsu";
-        }
+    return monsterList[x];
+  }
+
+  public void evolution(int x) {
+    if (this.rare > 3) {
+      this.name = "Furutetsu";
     }
-        
-    Monster(int n,int r){
-        this.name=this.summonMonster(n);
-        this.rare=r;
-        this.to_String();
+  }
+
+  public void rank_up() {
+    if (this.rare < 4) {
+      this.rare += 1;
     }
+  }
+
+  Monster(int n, int r) {
+    this.name = this.summonMonster(n);
+    this.rare = r;
+    this.to_String();
+  }
 
 }
