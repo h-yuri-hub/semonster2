@@ -6,8 +6,8 @@ public class Monster {
   private String name;
   private int rare;
 
-  public void to_String() {
-    System.out.println(name + ":レア度[" + rare + "]");
+  public String to_String() {
+    return name + ":レア度[" + rare + "]";
   }
 
   public String summonMonster(int x) {
@@ -31,7 +31,7 @@ public class Monster {
   Monster(int n, int r) {
     this.name = this.summonMonster(n);
     this.rare = r;
-    this.to_String();
+    System.out.println(this.to_String());
   }
 
 }
