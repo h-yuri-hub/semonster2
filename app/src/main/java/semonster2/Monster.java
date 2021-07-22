@@ -8,6 +8,7 @@ public class Monster {
 
   public String to_String() {
     return name + ":レア度[" + rare + "]";
+
   }
 
   public String summonMonster(int x) {
@@ -32,6 +33,7 @@ public class Monster {
     this.name = this.summonMonster(n);
     this.rare = r;
     System.out.println(this.to_String());
+
   }
 
 }
